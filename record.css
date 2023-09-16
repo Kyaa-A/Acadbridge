@@ -15,6 +15,7 @@
   --gray: #f5f5f5;
   --black1: #222;
   --black2: #999;
+  --light_gray: #f5f5f5;
 }
 
 body {
@@ -58,7 +59,7 @@ body {
 
 .navigation ul li:hover,
 .navigation ul li.hovered {
-  background-color: var(--white);
+  background-color: var(--light_gray);
 }
 
 .navigation ul li:nth-child(1) {
@@ -101,6 +102,12 @@ body {
   white-space: nowrap;
 }
 
+.logo{
+  position: absolute;
+  height: 60px;
+  right: 0px;
+}
+
 /* --------- curve outside ---------- */
 .navigation ul li:hover a::before,
 .navigation ul li.hovered a::before {
@@ -112,7 +119,7 @@ body {
   height: 50px;
   background-color: transparent;
   border-radius: 50%;
-  box-shadow: 35px 35px 0 10px var(--white);
+  box-shadow: 35px 35px 0 10px var(--light_gray);
   pointer-events: none;
 }
 .navigation ul li:hover a::after,
@@ -125,7 +132,7 @@ body {
   height: 50px;
   background-color: transparent;
   border-radius: 50%;
-  box-shadow: 35px -35px 0 10px var(--white);
+  box-shadow: 35px -35px 0 10px var(--light_gray);
   pointer-events: none;
 }
 
@@ -135,7 +142,7 @@ body {
   width: calc(100% - 300px);
   left: 300px;
   min-height: 100vh;
-  background: var(--white);
+  background: var(--light_gray);
   transition: 0.5s;
 }
 .main.active {
@@ -208,6 +215,40 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+/* INFORMATION */
+
+.information{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: minmax(20vh, auto);
+  flex-direction: column;
+  font-weight: bold;
+  padding-top: 20px;
+}
+
+
+.id_num{
+  padding: 5px;
+  color: var(--blue);
+  font-size: large;
+}
+
+.name{
+  font-size: x-large;
+}
+
+.semester{
+  padding: 5px;
+  color: var(--blue);
+  font-size: larger;
+}
+
+.grade_level{
+  padding-bottom: 5px;
+  font-weight: normal;
 }
 
 /* ======================= Cards ====================== */

@@ -102,6 +102,12 @@ body {
   white-space: nowrap;
 }
 
+.logo{
+  position: absolute;
+  height: 60px;
+  right: 0px;
+}
+
 /* --------- curve outside ---------- */
 .navigation ul li:hover a::before,
 .navigation ul li.hovered a::before {
@@ -210,6 +216,40 @@ body {
   height: 100%;
   object-fit: cover;
 }
+
+/* INFORMATION */
+
+.information{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: minmax(20vh, auto);
+  flex-direction: column;
+  font-weight: bold;
+  padding: 10px;
+}
+
+.id_num{
+  padding: 10px;
+  color: var(--blue);
+  font-size: x-large;
+}
+
+.name{
+  font-size: xx-large;
+}
+
+.semester{
+  padding: 10px;
+  color: var(--blue);
+  font-size: x-large;
+}
+
+.grade_level{
+  padding-bottom: 10px;
+  font-weight: larger;
+}
+
 
 /* ======================= Cards ====================== */
 .cardBox {
@@ -329,9 +369,9 @@ body {
 .details .recentOrders table tr td:nth-child(3) {
   text-align: center;
 }
-.status.delivered {
+.status.official {
   padding: 2px 4px;
-  background: #8de02c;
+  background: green;
   color: var(--white);
   border-radius: 4px;
   font-size: 14px;
@@ -339,7 +379,7 @@ body {
 }
 .status.pending {
   padding: 2px 4px;
-  background: #e9b10a;
+  background: rgb(255, 255, 2);
   color: var(--white);
   border-radius: 4px;
   font-size: 14px;
@@ -347,7 +387,7 @@ body {
 }
 .status.return {
   padding: 2px 4px;
-  background: #f00;
+  background: red;
   color: var(--white);
   border-radius: 4px;
   font-size: 14px;

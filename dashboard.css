@@ -226,29 +226,29 @@ body {
   height: minmax(20vh, auto);
   flex-direction: column;
   font-weight: bold;
-  padding-top: 20px;
+  padding: 40px;
 }
 
 
 .id_num{
-  padding: 5px;
+  padding: 10px;
   color: var(--blue);
-  font-size: large;
-}
-
-.name{
   font-size: x-large;
 }
 
+.name{
+  font-size: xx-large;
+}
+
 .semester{
-  padding: 5px;
+  padding: 10px;
   color: var(--blue);
-  font-size: larger;
+  font-size: x-large;
 }
 
 .grade_level{
-  padding-bottom: 5px;
-  font-weight: normal;
+  padding-bottom: 10px;
+  font-weight: larger;
 }
 
 /* ======================= Cards ====================== */
