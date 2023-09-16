@@ -385,7 +385,7 @@ body {
   font-size: 14px;
   font-weight: 500;
 }
-.status.return {
+.status.failing {
   padding: 2px 4px;
   background: #f00;
   color: var(--white);
