@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700");
-*{
+
+* {
   margin: 0;
   padding: 0;
   outline: none;
@@ -8,6 +9,7 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
+
 :root {
   --blue: #2a2185;
   --white: #fff;
@@ -16,13 +18,16 @@
   --black2: #999;
   --light_gray: #f5f5f5;
 }
-body{
+
+body {
   background: var(--light_gray);
 }
-.container{
+
+.container {
   display: flex;
 }
-nav{
+
+nav {
   position: relative;
   top: 0;
   bottom: 0;
@@ -32,21 +37,25 @@ nav{
   width: 280px;
   overflow: hidden;
 }
-.logo{
+
+.logo {
   text-align: center;
   display: flex;
   margin: 10px 0 0 10px;
 }
-.logo img{
+
+.logo img {
   width: 45px;
   height: 45px;
   border-radius: 50%;
 }
-.logo span{
+
+.logo span {
   padding-left: 15px;
   font-size: 15px;
 }
-a{
+
+a {
   position: relative;
   color: var(--white);
   font-size: 14px;
@@ -54,7 +63,8 @@ a{
   width: 280px;
   padding: 10px;
 }
-nav .fas{
+
+nav .fas {
   position: relative;
   width: 70px;
   height: 40px;
@@ -62,42 +72,49 @@ nav .fas{
   font-size: 20px;
   text-align: center;
 }
-.nav-item{
+
+.nav-item {
   position: relative;
   top: 12px;
   margin-left: 10px;
 }
-a:hover{
+
+a:hover {
   background: var(--light_gray);
   color: var(--blue);
 }
-.logout{
+
+.logout {
   position: absolute;
   bottom: 0;
 }
 
 /* Main Section */
-.main{
+.main {
   position: relative;
   padding: 20px;
   width: 100%;
 }
-.main-top{
+
+.main-top {
   display: flex;
   width: 100%;
 }
-.main-top i{
+
+.main-top i {
   position: absolute;
   right: 0;
   margin: 10px 30px;
   color: var(--black1);
   cursor: pointer;
 }
-.main-skills{
+
+.main-skills {
   display: flex;
   margin-top: 20px;
 }
-.main-skills .card{
+
+.main-skills .card {
   width: 25%;
   margin: 10px;
   background: var(--white);
@@ -106,14 +123,17 @@ a:hover{
   padding: 10px;
   box-shadow: 0 20px 35px var(--black2);
 }
-.main-skills .card h3{
+
+.main-skills .card h3 {
   margin: 10px;
   text-transform: capitalize;
 }
-.main-skills .card p{
+
+.main-skills .card p {
   font-size: 12px;
 }
-.main-skills .card button{
+
+.main-skills .card button {
   background: var(--blue);
   color: var(--white);
   padding: 7px 15px;
@@ -121,20 +141,23 @@ a:hover{
   margin-top: 15px;
   cursor: pointer;
 }
-.main-skills .card button:hover{
+
+.main-skills .card button:hover {
   background: var(--black1);
 }
-.main-skills .card i{
+
+.main-skills .card i {
   font-size: 22px;
   padding: 10px;
 }
 
 /* Courses */
-.main-course{
-  margin-top:20px ;
+.main-course {
+  margin-top: 20px;
   text-transform: capitalize;
 }
-.course-box{
+
+.course-box {
   width: 100%;
   height: 300px;
   padding: 10px 10px 30px 10px;
@@ -143,23 +166,28 @@ a:hover{
   border-radius: 10px;
   box-shadow: 0 20px 35px var(--black2);
 }
-.course-box ul{
+
+.course-box ul {
   list-style: none;
   display: flex;
 }
-.course-box ul li{
+
+.course-box ul li {
   margin: 10px;
   color: var(--black2);
   cursor: pointer;
 }
-.course-box ul .active{
+
+.course-box ul .active {
   color: var(--black1);
   border-bottom: 1px solid var(--black1);
 }
-.course-box .course{
+
+.course-box .course {
   display: flex;
 }
-.box{
+
+.box {
   width: 33%;
   padding: 10px;
   margin: 10px;
@@ -167,11 +195,13 @@ a:hover{
   background: rgb(235, 233, 233);
   box-shadow: 0 20px 35px var(--black2);
 }
-.box p{
+
+.box p {
   font-size: 12px;
   margin-top: 5px;
 }
-.box button{
+
+.box button {
   background: var(--blue);
   color: #fff;
   padding: 7px 10px;
@@ -179,21 +209,26 @@ a:hover{
   margin-top: 3rem;
   cursor: pointer;
 }
-.box button:hover{
+
+.box button:hover {
   background: var(--black1);
 }
-.box i{
+
+.box i {
   font-size: 7rem;
   float: right;
   margin: -20px 20px 20px 0;
 }
-.html{
+
+.html {
   color: rgb(235, 155, 7);
 }
-.css{
+
+.css {
   color: var(--blue);
 }
-.js{
+
+.js {
   color: #fdbf05;
 }
-  
+
