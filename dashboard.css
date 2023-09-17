@@ -226,7 +226,7 @@ body {
   height: minmax(20vh, auto);
   flex-direction: column;
   font-weight: bold;
-  padding: 40px;
+  padding: 10px;
 }
 
 
