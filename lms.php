@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <title>Acadbridge LMS</title>
-    <link rel="stylesheet" href="lms.css" />
+    <link rel="stylesheet" href="css/lms.css" />
     <!-- Font Awesome Cdn Link -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
 </head>
@@ -14,7 +14,7 @@
         <nav>
             <ul>
                 <li><a href="#" class="logo">
-                        <img src="Logo.png" alt="">
+                        <img src="image/Logo.png" alt="">
                         <span class="nav-item">Acadbridge</span>
                     </a></li>
                 <li><a href="#">
@@ -45,7 +45,7 @@
                         <i class="fas fa-question-circle"></i>
                         <span class="nav-item">Help</span>
                     </a></li>
-                <li><a href="dashboard.html" class="logout">
+                <li><a href="dashboard.php" class="logout">
                         <i class="fas fa-sign-out-alt"></i>
                         <span class="nav-item">Return</span>
                     </a></li>

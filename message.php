@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Feedback</title>
     <!-- ======= Styles ====== -->
-    <link rel="stylesheet" href="message.css">
+    <link rel="stylesheet" href="css/message.css">
 </head>
 
 <body>
@@ -18,14 +18,14 @@
                 <li>
                     <a href="#">
                         <span class="icon">
-                            <img class="logo" src="Logo.png">
+                            <img class="logo" src="image/Logo.png">
                         </span>
                         <span class="title">Acadbridge</span>
                     </a>
                 </li>
 
                 <li>
-                    <a href="dashboard.html">
+                    <a href="dashboard.php">
                         <span class="icon">
                             <ion-icon name="home-outline"></ion-icon>
                         </span>
@@ -34,7 +34,7 @@
                 </li>
 
                 <li>
-                    <a href="course.html">
+                    <a href="course.php">
                         <span class="icon">
                             <ion-icon name="people-outline"></ion-icon>
                         </span>
@@ -44,7 +44,7 @@
 
 
                 <li>
-                    <a href="record.html">
+                    <a href="record.php">
                         <span class="icon">
                             <ion-icon name="book-outline"></ion-icon>
                         </span>
@@ -62,7 +62,7 @@
                 </li>
 
                 <li>
-                    <a href="data_export.html">
+                    <a href="data_export.php">
                         <span class="icon">
                             <ion-icon name="download-outline"></ion-icon>
                         </span>
@@ -71,7 +71,7 @@
                 </li>
 
                 <li>
-                    <a href="lms.html">
+                    <a href="lms.php">
                         <span class="icon">
                             <ion-icon name="lock-closed-outline"></ion-icon>
                         </span>
@@ -80,7 +80,7 @@
                 </li>
 
                 <li>
-                    <a href="login.html">
+                    <a href="login.php">
                         <span class="icon">
                             <ion-icon name="log-out-outline"></ion-icon>
                         </span>
@@ -156,7 +156,7 @@
             </div>
 
             <!-- =========== Scripts =========  -->
-            <script src="main.js"></script>
+            <script src="js/main.js"></script>
 
             <!-- ====== ionicons ======= -->
             <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>

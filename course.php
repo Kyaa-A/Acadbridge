@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Class Schedule</title>
     <!-- ======= Styles ====== -->
-    <link rel="stylesheet" href="course.css">
+    <link rel="stylesheet" href="css/course.css">
 </head>
 
 <body>
@@ -18,14 +18,14 @@
                 <li>
                     <a href="#">
                         <span class="icon">
-                            <img class="logo" src="Logo.png">
+                            <img class="logo" src="image/Logo.png">
                         </span>
                         <span class="title">Acadbridge</span>
                     </a>
                 </li>
 
                 <li>
-                    <a href="dashboard.html">
+                    <a href="dashboard.php">
                         <span class="icon">
                             <ion-icon name="home-outline"></ion-icon>
                         </span>
@@ -44,7 +44,7 @@
 
 
                 <li>
-                    <a href="record.html">
+                    <a href="record.php">
                         <span class="icon">
                             <ion-icon name="book-outline"></ion-icon>
                         </span>
@@ -53,7 +53,7 @@
                 </li>
 
                 <li>
-                    <a href="message.html">
+                    <a href="message.php">
                         <span class="icon">
                             <ion-icon name="chatbubble-outline"></ion-icon>
                         </span>
@@ -62,7 +62,7 @@
                 </li>
 
                 <li>
-                    <a href="data_export.html">
+                    <a href="data_export.php">
                         <span class="icon">
                             <ion-icon name="download-outline"></ion-icon>
                         </span>
@@ -71,7 +71,7 @@
                 </li>
 
                 <li>
-                    <a href="lms.html">
+                    <a href="lms.php">
                         <span class="icon">
                             <ion-icon name="lock-closed-outline"></ion-icon>
                         </span>
@@ -80,7 +80,7 @@
                 </li>
 
                 <li>
-                    <a href="login.html">
+                    <a href="login.php">
                         <span class="icon">
                             <ion-icon name="log-out-outline"></ion-icon>
                         </span>
@@ -143,7 +143,7 @@
                         </thead>
 
                         <tbody>
-                            <tr>
+                            <!-- <tr>
                                 <td>254</td>
                                 <td>GE 3</td>
                                 <td>THE CONTEMPORARY WORLD</td>
@@ -154,7 +154,7 @@
                                 <td>D9</td>
                                 <td>PS</td>
                                 <td><span class="status official">Official</span></td>
-                            </tr>
+                            </tr> -->
 
                             <tr>
                                 <td>576</td>
@@ -169,7 +169,7 @@
                                 <td><span class="status official">Official</span></td>
                             </tr>
 
-                            <tr>
+                            <!-- <tr>
                                 <td>578</td>
                                 <td>GE 20</td>
                                 <td>READING VISUAL ARTS</td>
@@ -180,7 +180,7 @@
                                 <td>C17</td>
                                 <td>IT</td>
                                 <td><span class="status official">Official</span></td>
-                            </tr>
+                            </tr> -->
 
                             <tr>
                                 <td>579</td>
@@ -195,7 +195,7 @@
                                 <td><span class="status official">Official</span></td>
                             </tr>
 
-                            <tr>
+                           <!--  <tr>
                                 <td>498</td>
                                 <td>GPE 3</td>
                                 <td>PHYSICAL-ACTIVITIES TOWARDS HEALTH & FITNESS</td>
@@ -206,7 +206,7 @@
                                 <td>GYM</td>
                                 <td>PE</td>
                                 <td><span class="status official">Official</span></td>
-                            </tr>
+                            </tr> -->
 
                             <tr>
                                 <td>580</td>
@@ -251,7 +251,7 @@
                 </div>
 
                 <!-- =========== Scripts =========  -->
-                <script src="main.js"></script>
+                <script src="js/main.js"></script>
 
                 <!-- ====== ionicons ======= -->
                 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>

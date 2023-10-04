@@ -7,7 +7,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Acadbridge</title>
   <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
-  <link rel="stylesheet" href="login.css">
+  <link rel="stylesheet" href="css/login.css">
+
 </head>
 
 <body>
@@ -15,26 +16,31 @@
   <div class="container" id="container">
 
     <div class="form-container register-container">
-      <form action="#">
+      <form action="register.php" method="POST">
+
         <h1>Register</h1>
-        <input type="text" placeholder="Name">
-        <input type="email" placeholder="Email">
-        <input type="password" placeholder="Password">
-        <button>Register</button>
+        
+        <input type="text" name="username" placeholder="Username">
+        <input type="email" name="email" placeholder="Email">
+        <input type="password" name="password" placeholder="Password">
+        <button type="submit" name="register">Register</button>
+
         <span>or sign in with</span>
+        
         <div class="social-container">
           <a href="#" class="social"><i class="lni lni-facebook-fill"></i></a>
           <a href="#" class="social"><i class="lni lni-google"></i></a>
           <a href="#" class="social"><i class="lni lni-linkedin-original"></i></a>
         </div>
+
       </form>
     </div>
 
     <div class="form-container login-container">
-      <form action="#">
+      <form action="login.php" method="POST">
         <h1>Login</h1>
-        <input type="email" placeholder="Student ID Number or Email"> <!-- <input type="email" placeholder="Email"> -->
-        <input type="password" placeholder="Password">
+        <input type="text" name="username" placeholder="Username"> <!-- <input type="email" placeholder="Email"> -->
+        <input type="password" name="password" placeholder="Password">
         <div class="content">
           <div class="checkbox">
             <input type="checkbox" name="checkbox" id="checkbox">
@@ -44,13 +50,14 @@
             <a href="#">Forgot password?</a>
           </div>
         </div>
-        <a href="dashboard.html">
-          <button>Login</button>
+        <a>
+          <button type="submit" name="login">Login</button>
         </a>
         <span>or sign in with</span>
         <div class="social-container">
           <a href="https://facebook.com" class="social"><i class="lni lni-facebook-fill"></i></a>
-          <a href="https://accounts.google.com/o/oauth2/v2/auth/oauthchooseaccount?" class="social"><i class="lni lni-google"></i></a>
+          <a href="https://accounts.google.com/o/oauth2/v2/auth/oauthchooseaccount?" class="social"><i
+              class="lni lni-google"></i></a>
           <a href="https://linkedin.com" class="social"><i class="lni lni-linkedin-original"></i></a>
         </div>
       </form>
@@ -77,7 +84,7 @@
 
   </div>
 
-  <script src="login.js"></script>
+  <script src="js/login.js"></script>
 
 </body>
 

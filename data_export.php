@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
+    <title>Export Data</title>
     <!-- ======= Styles ====== -->
-    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="css/data_export.css">
 </head>
 
 <body>
@@ -18,14 +18,14 @@
                 <li>
                     <a href="#">
                         <span class="icon">
-                            <img class="logo" src="Logo.png">
+                            <img class="logo" src="image/Logo.png">
                         </span>
                         <span class="title">Acadbridge</span>
                     </a>
                 </li>
 
                 <li>
-                    <a href="#">
+                    <a href="dashboard.php">
                         <span class="icon">
                             <ion-icon name="home-outline"></ion-icon>
                         </span>
@@ -34,7 +34,7 @@
                 </li>
 
                 <li>
-                    <a href="course.html">
+                    <a href="course.php">
                         <span class="icon">
                             <ion-icon name="people-outline"></ion-icon>
                         </span>
@@ -44,7 +44,7 @@
 
 
                 <li>
-                    <a href="record.html">
+                    <a href="record.php">
                         <span class="icon">
                             <ion-icon name="book-outline"></ion-icon>
                         </span>
@@ -53,7 +53,7 @@
                 </li>
 
                 <li>
-                    <a href="message.html">
+                    <a href="message.php">
                         <span class="icon">
                             <ion-icon name="chatbubble-outline"></ion-icon>
                         </span>
@@ -62,7 +62,7 @@
                 </li>
 
                 <li>
-                    <a href="data_export.html">
+                    <a href="#">
                         <span class="icon">
                             <ion-icon name="download-outline"></ion-icon>
                         </span>
@@ -71,7 +71,7 @@
                 </li>
 
                 <li>
-                    <a href="lms.html">
+                    <a href="lms.php">
                         <span class="icon">
                             <ion-icon name="lock-closed-outline"></ion-icon>
                         </span>
@@ -80,7 +80,7 @@
                 </li>
 
                 <li>
-                    <a href="login.html">
+                    <a href="login.php">
                         <span class="icon">
                             <ion-icon name="log-out-outline"></ion-icon>
                         </span>
@@ -108,69 +108,10 @@
                     <img src="Asnari.jpg" alt="">
                 </div>
             </div>
-            <!-- INFORMATION -->
 
-            <div class="information">
-                <div class="id_num">59891</div>
-                <div class="name">Asnari B. Pacalna</div>
-                <div class="semester">First Semester 2023-2024</div>
-                <div class="grade_level">2nd Year Bachelor of Science in Information Technology</div>
-            </div>
-            <!-- ======================= Cards ================== -->
-            <div class="cardBox">
-                <div class="card">
-                    <div>
-                        <div class="numbers">5.46</div>
-                        <div class="cardName">Exams Paid</div>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div>
-                        <div class="numbers">22,827.00</div>
-                        <div class="cardName">Total Assessment</div>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div>
-                        <div class="numbers">N/A</div>
-                        <div class="cardName">Special Permit</div>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div>
-                        <div class="numbers">15,672.50</div>
-                        <div class="cardName">Total Payment</div>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div>
-                        <div class="numbers">7,154.50</div>
-                        <div class="cardName">Current Balance</div>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div>
-                        <div class="numbers">2,820.00</div>
-                        <div class="cardName">Per Exam</div>
-                    </div>
-                </div>
-
-                <div class="card seven">
-                    <div>
-                        <div class="numbers">450.00</div>
-                        <div class="cardName">Total Previous Balance</div>
-                    </div>
-                </div>
-
-            </div>
 
             <!-- =========== Scripts =========  -->
-            <script src="main.js"></script>
+            <script src="js/main.js"></script>
 
             <!-- ====== ionicons ======= -->
             <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>

@@ -1,0 +1,256 @@
+:root {
+  --peach: #efd9ce;
+  --background: #dec0f1;
+  --mid: #b79ced;
+  --text: #957fef;
+  --bold_text: #5a46f0;
+}
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to bottom, #140421, var(--mid), #390a56);
+}
+
+.slider {
+  width: 800px;
+  height: 500px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.slides {
+  width: 500%;
+  height: 500px;
+  display: flex;
+}
+
+.slides input {
+  display: none;
+}
+
+.slide {
+  width: 20%;
+  transition: 3s;
+  background-color: #fff;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  text-align: center;
+  padding: 20px;
+  grid-template-rows: repeat(3, minmax(50px, auto));
+  background-color: #fff;
+  border: 1px solid red;
+}
+
+.header {
+  grid-column: 1/3;
+  grid-row: 1/2;
+  margin: auto;
+  width: 100%;
+  background: #390a56;
+  transition: border-radius 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px rgb(190, 190, 190),
+    0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+  padding: 30px 0px;
+  color: #fff;
+  border-radius: 10px 10px 0 0;
+  max-height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-shadow: 3px 3px 2px black;
+  font-size: larger;
+}
+
+.one {
+  grid-column: 1/3;
+  grid-row: 2/3;
+  margin: auto;
+  width: 100%;
+  background: white;
+  transition: border-radius 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px rgb(190, 190, 190),
+    0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+}
+
+.two {
+  grid-column: 1/2;
+  grid-row: 3/4;
+  margin: auto;
+  width: 100%;
+  background: white;
+  border-radius: 0px 0px 0px 10px;
+  transition: border-radius 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px rgb(190, 190, 190),
+    0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+  min-height: 37vh;
+}
+
+.three {
+  grid-column: 2/3;
+  grid-row: 3/4;
+  margin: auto;
+  width: 100%;
+  background: white;
+  border-radius: 0px 0px 10px 0px;
+  transition: border-radius 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px rgb(190, 190, 190),
+    0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+  min-height: 37vh;
+}
+
+/* Assignment Tables */
+/* 
+thead,
+tbody,
+th,
+td {
+  border: 1px solid black;
+  background-color: var(--mid);
+}
+
+td {
+  padding: 5px 2.5px;
+}
+
+table {
+  display: inline-block;
+  margin: 0 10px 10px 10px;
+  border: 1px solid black;
+  table-layout: fixed;
+}
+ */
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+
+th,
+td {
+  border: 1px solid #dddddd;
+  text-align: center;
+  padding: 5px;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.box{
+  overflow-x:auto;
+}
+
+.header_div {
+  text-transform: capitalize;
+  padding: 15px 0px;
+  font-size: large;
+}
+
+/*css for manual slide navigation*/
+
+.navigation-manual {
+  position: absolute;
+  width: 800px;
+  margin-top: -40px;
+  display: flex;
+  justify-content: center;
+}
+
+.manual-btn {
+  border: 2px solid #390a56;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.manual-btn:not(:last-child) {
+  margin-right: 40px;
+}
+
+.manual-btn:hover {
+  background: #390a56;
+}
+
+#radio1:checked ~ .first {
+  margin-left: 0;
+}
+
+#radio2:checked ~ .first {
+  margin-left: -20%;
+}
+
+#radio3:checked ~ .first {
+  margin-left: -40%;
+}
+
+#radio4:checked ~ .first {
+  margin-left: -60%;
+}
+
+#radio5:checked ~ .first {
+  margin-left: -80%;
+}
+
+/*css for automatic navigation*/
+
+.navigation-auto {
+  position: absolute;
+  display: flex;
+  width: 800px;
+  justify-content: center;
+  margin-top: 460px;
+}
+
+.navigation-auto div {
+  border: 2px solid #390a56;
+  padding: 5px;
+  border-radius: 10px;
+  transition: 3s;
+}
+
+.navigation-auto div:not(:last-child) {
+  margin-right: 40px;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1 {
+  background: #390a56;
+}
+
+#radio2:checked ~ .navigation-auto .auto-btn2 {
+  background: #390a56;
+}
+
+#radio3:checked ~ .navigation-auto .auto-btn3 {
+  background: #390a56;
+}
+
+#radio4:checked ~ .navigation-auto .auto-btn4 {
+  background: #390a56;
+}
+
+#radio5:checked ~ .navigation-auto .auto-btn5 {
+  background: #390a56;
+}

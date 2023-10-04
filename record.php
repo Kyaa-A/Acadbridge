@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Records</title>
     <!-- ======= Styles ====== -->
-    <link rel="stylesheet" href="record.css">
+    <link rel="stylesheet" href="css/record1.css">
 </head>
 
 <body>
@@ -18,14 +18,14 @@
                 <li>
                     <a href="#">
                         <span class="icon">
-                            <img class="logo" src="Logo.png">
+                            <img class="logo" src="image/Logo.png">
                         </span>
                         <span class="title">Acadbridge</span>
                     </a>
                 </li>
 
                 <li>
-                    <a href="dashboard.html">
+                    <a href="dashboard.php">
                         <span class="icon">
                             <ion-icon name="home-outline"></ion-icon>
                         </span>
@@ -34,7 +34,7 @@
                 </li>
 
                 <li>
-                    <a href="course.html">
+                    <a href="course.php">
                         <span class="icon">
                             <ion-icon name="people-outline"></ion-icon>
                         </span>
@@ -53,7 +53,7 @@
                 </li>
 
                 <li>
-                    <a href="message.html">
+                    <a href="message.php">
                         <span class="icon">
                             <ion-icon name="chatbubble-outline"></ion-icon>
                         </span>
@@ -62,7 +62,7 @@
                 </li>
 
                 <li>
-                    <a href="data_export.html">
+                    <a href="data_export.php">
                         <span class="icon">
                             <ion-icon name="download-outline"></ion-icon>
                         </span>
@@ -71,7 +71,7 @@
                 </li>
 
                 <li>
-                    <a href="lms.html">
+                    <a href="lms.php">
                         <span class="icon">
                             <ion-icon name="lock-closed-outline"></ion-icon>
                         </span>
@@ -80,7 +80,7 @@
                 </li>
 
                 <li>
-                    <a href="login.html">
+                    <a href="login.php">
                         <span class="icon">
                             <ion-icon name="log-out-outline"></ion-icon>
                         </span>
@@ -123,7 +123,7 @@
                 <div class="recentOrders">
                     <div class="cardHeader">
                         <h2>Student Permanent Record <br> First Semester 2023-2024</h2>
-                        <a href="#" class="btn">View All</a>
+                        <a href="record_view.php" class="btn">View All</a>
                     </div>
 
                     <table>
@@ -138,13 +138,13 @@
                         </thead>
 
                         <tbody>
-                            <tr>
+                            <!-- <tr>
                                 <td>GE 3</td>
                                 <td>THE CONTEMPORARY WORLD</td>
                                 <td>4.0</td>
                                 <td>3.0</td>
                                 <td><span class="status official">Passed</span></td>
-                            </tr>
+                            </tr> -->
 
                             <tr>
                                 <td>CCE 105</td>
@@ -154,13 +154,13 @@
                                 <td><span class="status official">Passed</span></td>
                             </tr>
 
-                            <tr>
+                          <!--   <tr>
                                 <td>GE 20</td>
                                 <td>READING VISUAL ARTS</td>
                                 <TD>4.0</TD>
                                 <td>3.0</td>
                                 <td><span class="status official">Passed</span></td>
-                            </tr>
+                            </tr> -->
 
                             <tr>
                                 <td>CCE 104</td>
@@ -170,13 +170,13 @@
                                 <td><span class="status official">Passed</span></td>
                             </tr>
 
-                            <tr>
+                           <!--  <tr>
                                 <td>GPE 3</td>
                                 <td>PHYSICAL-ACTIVITIES TOWARDS HEALTH & FITNESS</td>
                                 <td>4.0</td>
                                 <td>2.0</td>
                                 <td><span class="status official">Passed</span></td>
-                            </tr>
+                            </tr> -->
 
                             <tr>
                                 <td>IT 3</td>
@@ -206,7 +206,7 @@
                 </div>
 
                 <!-- =========== Scripts =========  -->
-                <script src="main.js"></script>
+                <script src="js/main.js"></script>
 
                 <!-- ====== ionicons ======= -->
                 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
