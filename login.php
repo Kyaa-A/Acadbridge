@@ -9,16 +9,26 @@ if (isset($_POST['login'])) {
     $result = $conn->query($sql);
 
     if ($result->num_rows == 1) {
+
+        // Login successful, fetch the student name
+        $row = $result->fetch_assoc();
+        $stud_name = $row['stud_name'];
+
+        // Store stud_name in a session variable
+        session_start();
+        $_SESSION['stud_name'] = $stud_name;
         echo "Login successful!";
         header("Location: dashboard.php");
+        
     } else {
-        /* echo "Login failed. Invalid username or password."; */
+
         echo
             "
             <script>
             window.alert('Login failed. Invalid Username or Password');
             </script>
             ";
+
     }
 
     $conn->close();

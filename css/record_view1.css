@@ -54,7 +54,6 @@ body {
   padding: 20px;
   grid-template-rows: repeat(3, minmax(50px, auto));
   background-color: #fff;
-  border: 1px solid red;
 }
 
 .header {
@@ -115,32 +114,11 @@ body {
 }
 
 /* Assignment Tables */
-/* 
-thead,
-tbody,
-th,
-td {
-  border: 1px solid black;
-  background-color: var(--mid);
-}
-
-td {
-  padding: 5px 2.5px;
-}
-
-table {
-  display: inline-block;
-  margin: 0 10px 10px 10px;
-  border: 1px solid black;
-  table-layout: fixed;
-}
- */
 
 table {
   border-collapse: collapse;
   width: 100%;
 }
-
 
 th,
 td {
@@ -166,6 +144,13 @@ tr:nth-child(even) {
   text-transform: capitalize;
   padding: 15px 0px;
   font-size: large;
+}
+
+.examGrade{
+  min-height: 19vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /*css for manual slide navigation*/

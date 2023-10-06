@@ -2,11 +2,12 @@
 include('db_config.php');
 
 if (isset($_POST['register'])) {
-    $username = $_POST['username'];
+    $stud_name = $_POST['stud_name'];
     $email = $_POST['email'];
+    $username = $_POST['username'];
     $password = $_POST['password'];
 
-    $sql = "INSERT INTO users (username, email, password) VALUES ('$username', '$email', '$password')";
+    $sql = "INSERT INTO users (stud_name ,email, username, password) VALUES ('$stud_name','$email','$username','$password')";
 
     if ($conn->query($sql) === TRUE) {
         /* echo "Registration successful!"; */
@@ -16,12 +17,12 @@ if (isset($_POST['register'])) {
             window.alert('Successfully added to Database');
             </script>
             ";
-            $tester = true;
+        $tester = true;
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
     }
 
-    if($tester){
+    if ($tester) {
         header("Location: index.php");
     }
     $conn->close();

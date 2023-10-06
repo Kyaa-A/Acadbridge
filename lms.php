@@ -14,7 +14,7 @@
         <nav>
             <ul>
                 <li><a href="#" class="logo">
-                        <img src="image/Logo.png" alt="">
+                        <img src="css/image/Logo.png" alt="">
                         <span class="nav-item">Acadbridge</span>
                     </a></li>
                 <li><a href="#">

@@ -18,7 +18,7 @@
                 <li>
                     <a href="#">
                         <span class="icon">
-                            <img class="logo" src="image/Logo.png">
+                            <img class="logo" src="css/image/Logo.png">
                         </span>
                         <span class="title">Acadbridge</span>
                     </a>
@@ -105,7 +105,7 @@
                 </div>
 
                 <div class="user">
-                    <img src="Asnari.jpg" alt="">
+                    <img src="css/image/Asnari.jpg" alt="">
                 </div>
             </div>
 
@@ -135,7 +135,7 @@
                     </div>
                     <div class="right-side">
                         <div class="topic-text">Send us a message</div>
-                        <p>If you have any concerns, suggestions, or queries related to the system, 
+                        <p>If you have any concerns, suggestions, or queries related to the system,
                             feel free to send a message from this platform.</p>
                         <form action="#">
                             <div class="input-box">

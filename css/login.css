@@ -1,12 +1,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins");
 
+:root {
+  --peach: #efd9ce;
+  --background: #dec0f1;
+  --mid: #b79ced;
+  --text: #957fef;
+  --bold_text: #5a46f0a;
+}
+
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
   display: flex;
-  background-color: #333;
+  background: linear-gradient(to bottom, #140421, var(--mid), #390a56);
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -114,26 +124,26 @@ button.ghost {
   color: #fff;
 }
 
-button.ghost i{
+button.ghost i {
   position: absolute;
   opacity: 0;
   transition: 0.3s ease-in-out;
 }
 
-button.ghost i.register{
+button.ghost i.register {
   right: 70px;
 }
 
-button.ghost i.login{
+button.ghost i.login {
   left: 70px;
 }
 
-button.ghost:hover i.register{
+button.ghost:hover i.register {
   right: 40px;
   opacity: 1;
 }
 
-button.ghost:hover i.login{
+button.ghost:hover i.login {
   left: 40px;
   opacity: 1;
 }
@@ -160,7 +170,7 @@ input {
 
 .container {
   background-color: #fff;
-  border-radius: 25px;
+  border-radius: 30px;
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   position: relative;
   overflow: hidden;
@@ -230,9 +240,10 @@ input {
 }
 
 .overlay {
-  background-image: url(chillAcad.gif);
+  /* background-image: url(image/chillAcad.gif);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover; */
+  background-color: black;
   background-position: 0 0;
   color: #fff;
   position: relative;
@@ -311,4 +322,95 @@ input {
 
 .social-container a:hover {
   border: 1px solid #4bb6b7;
+}
+
+/* Background */
+
+.wrapper {
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(180deg, #04fafd, 5%, #119dff, 50%, #030423);
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper .div_background {
+  height: 60px;
+  width: 60px;
+  border: 2px solid rgba(255, 255, 255, 0.7);
+  border-radius: 50px;
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  animation: 4s linear infinite;
+}
+.div_background .dot {
+  height: 10px;
+  width: 10px;
+  border-radius: 50px;
+  background: rgba(255, 255, 255, 0.5);
+  position: absolute;
+  top: 20%;
+  right: 20%;
+}
+.wrapper .div_background:nth-child(1) {
+  top: 50%;
+  left: 80%;
+  animation: animate 8s linear infinite;
+}
+.wrapper .div_background:nth-child(2) {
+  top: 60%;
+  left: 90%;
+  animation: animate 10s linear infinite;
+}
+.wrapper .div_background:nth-child(3) {
+  top: 100%;
+  left: 90%;
+  animation: animate 7s linear infinite;
+}
+.wrapper .div_background:nth-child(4) {
+  top: 30%;
+  left: 5%;
+  animation: animate 7s linear infinite;
+}
+.wrapper .div_background:nth-child(5) {
+  top: 90%;
+  left: 5%;
+  animation: animate 9s linear infinite;
+}
+.wrapper .div_background:nth-child(6) {
+  top: 10%;
+  left: 90%;
+  animation: animate 9s linear infinite;
+}
+.wrapper .div_background:nth-child(7) {
+  top: 20%;
+  left: 50%;
+  animation: animate 7s linear infinite;
+}
+.wrapper .div_background:nth-child(8) {
+  top: 20%;
+  left: 20%;
+  animation: animate 8s linear infinite;
+}
+.wrapper .div_background:nth-child(9) {
+  top: 60%;
+  left: 10%;
+  animation: animate 6s linear infinite;
+}
+.wrapper .div_background:nth-child(10) {
+  top: 90%;
+  left: 80%;
+  animation: animate 9s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    transform: scale(0) translateY(0) rotate(70deg);
+  }
+  100% {
+    transform: scale(1.3) translateY(-100px) rotate(360deg);
+  }
 }

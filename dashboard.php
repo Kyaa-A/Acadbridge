@@ -1,3 +1,16 @@
+<?php
+// Start the session
+session_start();
+
+// Check if stud_name is set in the session
+if (isset($_SESSION['stud_name'])) {
+    $stud_name = $_SESSION['stud_name'];
+} else {
+    // Redirect to the login page if stud_name is not set
+    header("Location: index.php");
+    exit(); // Make sure to exit after redirection
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,7 +31,7 @@
                 <li>
                     <a href="#">
                         <span class="icon">
-                            <img class="logo" src="image/Logo.png">
+                            <img class="logo" src="css/image/Logo.png">
                         </span>
                         <span class="title">Acadbridge</span>
                     </a>
@@ -105,14 +118,17 @@
                 </div>
 
                 <div class="user">
-                    <img src="Asnari.jpg" alt="">
+                    <img src="css/image/Asnari.jpg" alt="">
                 </div>
             </div>
             <!-- INFORMATION -->
 
+
             <div class="information">
                 <div class="id_num">59891</div>
-                <div class="name">Asnari B. Pacalna</div>
+                <div class="name">
+                    <?php echo $stud_name; ?>
+                </div>
                 <div class="semester">First Semester 2023-2024</div>
                 <div class="grade_level">2nd Year Bachelor of Science in Information Technology</div>
             </div>
