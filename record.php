@@ -93,7 +93,7 @@ if (isset($_SESSION['stud_name'])) {
                 </li>
 
                 <li>
-                    <a href="login.php">
+                    <a href="index.php">
                         <span class="icon">
                             <ion-icon name="log-out-outline"></ion-icon>
                         </span>

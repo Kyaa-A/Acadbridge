@@ -1,3 +1,16 @@
+<?php
+// Start the session
+session_start();
+
+// Check if stud_name is set in the session
+if (isset($_SESSION['stud_name'])) {
+    $stud_name = $_SESSION['stud_name'];
+} else {
+    // Redirect to the login page if stud_name is not set
+    header("Location: index.php");
+    exit(); // Make sure to exit after redirection
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,9 +18,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Feedback</title>
+    <title>Dashboard</title>
     <!-- ======= Styles ====== -->
-    <link rel="stylesheet" href="css/message.css">
+    <link rel="stylesheet" href="css/dashboard.css">
 </head>
 
 <body>
@@ -25,7 +38,7 @@
                 </li>
 
                 <li>
-                    <a href="dashboard.php">
+                    <a href="#">
                         <span class="icon">
                             <ion-icon name="home-outline"></ion-icon>
                         </span>
@@ -53,7 +66,7 @@
                 </li>
 
                 <li>
-                    <a href="#">
+                    <a href="message.php">
                         <span class="icon">
                             <ion-icon name="chatbubble-outline"></ion-icon>
                         </span>
@@ -108,51 +121,68 @@
                     <img src="css/image/Asnari.jpg" alt="">
                 </div>
             </div>
+            <!-- INFORMATION -->
 
-            <!-- Contact US -->
 
-            <div class="box">
-                <div class="content">
-                    <div class="left-side">
-                        <div class="address details">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <div class="topic">Address</div>
-                            <div class="text-one">Digos, Davao Del Sur</div>
-                            <div class="text-two">Luna Extension</div>
-                        </div>
-                        <div class="phone details">
-                            <i class="fas fa-phone-alt"></i>
-                            <div class="topic">Phone</div>
-                            <div class="text-one">+63 966 124 0909</div>
-                            <div class="text-two">+63 973 483 6127</div>
-                        </div>
-                        <div class="email details">
-                            <i class="fas fa-envelope"></i>
-                            <div class="topic">Email</div>
-                            <div class="text-one">Acadbridge@gmail.com</div>
-                            <div class="text-two">Acadfinest@gmail.com</div>
-                        </div>
-                    </div>
-                    <div class="right-side">
-                        <div class="topic-text">Send us a message</div>
-                        <p>If you have any concerns, suggestions, or queries related to the system,
-                            feel free to send a message from this platform.</p>
-                        <form action="#">
-                            <div class="input-box">
-                                <input type="text" placeholder="Enter your name">
-                            </div>
-                            <div class="input-box">
-                                <input type="text" placeholder="Enter your email">
-                            </div>
-                            <div class="input-box message-box">
-                                <input type="text" placeholder="Enter your message">
-                            </div>
-                            <div class="button">
-                                <input type="button" value="Send Now">
-                            </div>
-                        </form>
+            <div class="information">
+                <div class="id_num">59891</div>
+                <div class="name">
+                    <?php echo $stud_name; ?>
+                </div>
+                <div class="semester">First Semester 2023-2024</div>
+                <div class="grade_level">2nd Year Bachelor of Science in Information Technology</div>
+            </div>
+            <!-- ======================= Cards ================== -->
+            <div class="cardBox">
+                <div class="card">
+                    <div>
+                        <div class="numbers">5.46</div>
+                        <div class="cardName">Exams Paid</div>
                     </div>
                 </div>
+
+                <div class="card">
+                    <div>
+                        <div class="numbers">22,827.00</div>
+                        <div class="cardName">Total Assessment</div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div>
+                        <div class="numbers">N/A</div>
+                        <div class="cardName">Special Permit</div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div>
+                        <div class="numbers">15,672.50</div>
+                        <div class="cardName">Total Payment</div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div>
+                        <div class="numbers">7,154.50</div>
+                        <div class="cardName">Current Balance</div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div>
+                        <div class="numbers">2,820.00</div>
+                        <div class="cardName">Per Exam</div>
+                    </div>
+                </div>
+
+                <div class="card seven">
+                    <div>
+                        <div class="numbers">450.00</div>
+                        <div class="cardName">Total Previous Balance</div>
+                    </div>
+                </div>
+
             </div>
 
             <!-- =========== Scripts =========  -->

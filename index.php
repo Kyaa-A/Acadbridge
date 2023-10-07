@@ -30,10 +30,15 @@
         <form action="register.php" method="POST">
 
           <h1>Register</h1>
-          <input type="text" name="stud_name" placeholder="Student Name">
+          <input type="text" name="stud_name" placeholder="Name">
           <input type="email" name="email" placeholder="Email">
           <input type="text" name="username" placeholder="Username">
           <input type="password" name="password" placeholder="Password">
+          <div class="user_type">
+            <input type="radio" name="user_type" value="1" checked>Student
+            <input type="radio" name="user_type" value="2">Instructor
+            <input type="radio" name="user_type" value="3">Admin
+          </div>
           <button type="submit" name="register">Register</button>
 
           <span>or sign in with</span>

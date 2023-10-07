@@ -23,7 +23,7 @@ body {
   overflow-x: hidden;
 }
 
-.backend {
+.container {
   position: relative;
   width: 100%;
 }
@@ -138,12 +138,13 @@ body {
 
 /* ===================== Main ===================== */
 .main {
-  position: absolute;
+  position: relative;
   width: calc(100% - 300px);
   left: 300px;
   min-height: 100vh;
   background: var(--light_gray);
   transition: 0.5s;
+
 }
 .main.active {
   width: calc(100% - 80px);
@@ -217,6 +218,39 @@ body {
   object-fit: cover;
 }
 
+/* INFORMATION */
+
+.information {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: minmax(20vh, auto);
+  flex-direction: column;
+  font-weight: bold;
+  padding: 10px;
+}
+
+.id_num {
+  padding: 10px;
+  color: var(--blue);
+  font-size: x-large;
+}
+
+.name {
+  font-size: xx-large;
+}
+
+.semester {
+  padding: 10px;
+  color: var(--blue);
+  font-size: x-large;
+}
+
+.grade_level {
+  padding-bottom: 10px;
+  font-weight: larger;
+}
+
 /* ====================== Responsive Design ========================== */
 @media (max-width: 991px) {
   .navigation {
@@ -280,69 +314,246 @@ body {
   }
 }
 
-.container {
-  height: 300px;
-  width: 300px;
+.status.official {
+  padding: 2px 4px;
+  background: green;
+  color: var(--white);
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+}
+.status.pending {
+  padding: 2px 4px;
+  background: #fdbf05;
+  color: var(--white);
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+}
+.status.return {
+  padding: 2px 4px;
+  background: red;
+  color: var(--white);
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+}
+.status.inProgress {
+  padding: 2px 4px;
+  background: #1795ce;
+  color: var(--white);
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.recentCustomers {
+  position: relative;
+  display: grid;
+  min-height: 500px;
+  padding: 20px;
+  background: var(--white);
+  box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+  border-radius: 20px;
+}
+.recentCustomers .imgBx {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  overflow: hidden;
+}
+.recentCustomers .imgBx img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.recentCustomers table tr td {
+  padding: 12px 10px;
+}
+.recentCustomers table tr td h4 {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.2rem;
+}
+.recentCustomers table tr td h4 span {
+  font-size: 14px;
+  color: var(--black2);
+}
+.recentCustomers table tr:hover {
+  background: var(--blue);
+  color: var(--white);
+}
+.recentCustomers table tr:hover td h4 span {
+  color: var(--white);
+}
+
+.slider {
+  width: 800px;
+  height: 500px;
   border-radius: 10px;
-  box-shadow: 4px 4px 30px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  position: absolute;
+  left: 100px;
+}
+
+.slides {
+  width: 500%;
+  height: 500px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  gap: 5px;
-  background-color: rgba(0, 110, 255, 0.041);
-  margin: 100px 375px;
+}
+
+.slides input {
+  display: none;
+}
+
+.slide {
+  width: 20%;
+  transition: 3s;
+  background-color: #fff;
+}
+
+/*css for manual slide navigation*/
+
+.navigation-manual {
+  position: absolute;
+  width: 800px;
+  margin-top: -40px;
+  display: flex;
+  justify-content: center;
+}
+
+.manual-btn {
+  border: 2px solid #390a56;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.manual-btn:not(:last-child) {
+  margin-right: 40px;
+}
+
+.manual-btn:hover {
+  background: #390a56;
+}
+
+#radio1:checked ~ .first {
+  margin-left: 0;
+}
+
+#radio2:checked ~ .first {
+  margin-left: -20%;
+}
+
+#radio3:checked ~ .first {
+  margin-left: -40%;
+}
+
+#radio4:checked ~ .first {
+  margin-left: -60%;
+}
+
+#radio5:checked ~ .first {
+  margin-left: -80%;
+}
+
+/*css for automatic navigation*/
+
+.navigation-auto {
+  position: absolute;
+  display: flex;
+  width: 800px;
+  justify-content: center;
+  margin-top: 460px;
+}
+
+.navigation-auto div {
+  border: 2px solid #390a56;
+  padding: 5px;
+  border-radius: 10px;
+  transition: 3s;
+}
+
+.navigation-auto div:not(:last-child) {
+  margin-right: 40px;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1 {
+  background: #390a56;
+}
+
+#radio2:checked ~ .navigation-auto .auto-btn2 {
+  background: #390a56;
+}
+
+#radio3:checked ~ .navigation-auto .auto-btn3 {
+  background: #390a56;
+}
+
+#radio4:checked ~ .navigation-auto .auto-btn4 {
+  background: #390a56;
+}
+
+#radio5:checked ~ .navigation-auto .auto-btn5 {
+  background: #390a56;
 }
 
 .header {
-  flex: 1;
+  grid-column: 1/3;
+  grid-row: 1/2;
+  margin: auto;
   width: 100%;
-  border: 2px dashed royalblue;
-  border-radius: 10px;
+  background: #390a56;
+  transition: border-radius 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px rgb(190, 190, 190),
+    0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+  padding: 30px 0px;
+  color: #fff;
+  border-radius: 10px 10px 0 0;
+  max-height: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
+  text-shadow: 3px 3px 2px black;
+  font-size: larger;
 }
 
-.header svg {
-  height: 100px;
-}
+/* Assignment Tables */
 
-.header p {
-  text-align: center;
-  color: black;
-}
-
-.footer {
-  background-color: rgba(0, 110, 255, 0.075);
+table {
+  border-collapse: collapse;
   width: 100%;
-  height: 40px;
-  padding: 8px;
-  border-radius: 10px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  color: black;
-  border: none;
 }
 
-.footer svg {
-  height: 130%;
-  fill: royalblue;
-  background-color: rgba(70, 66, 66, 0.103);
-  border-radius: 50%;
-  padding: 2px;
-  cursor: pointer;
-  box-shadow: 0 2px 30px rgba(0, 0, 0, 0.205);
-}
-
-.footer p {
-  flex: 1;
+th,
+td {
+  border: 1px solid #dddddd;
   text-align: center;
+  padding: 5px;
 }
 
-#file {
-  display: none;
+th {
+  background-color: #f2f2f2;
+  padding: 15px;
 }
+
+td{
+    padding: 10px;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.header_div {
+  text-transform: capitalize;
+  padding: 15px 0px;
+  font-size: large;
+}
+
+

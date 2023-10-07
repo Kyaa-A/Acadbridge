@@ -18,9 +18,9 @@ if (isset($_SESSION['stud_name'])) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Class Schedule</title>
+    <title>Dashboard</title>
     <!-- ======= Styles ====== -->
-    <link rel="stylesheet" href="css/course.css">
+    <link rel="stylesheet" href="css/instructor_dashboard.css">
 </head>
 
 <body>
@@ -38,7 +38,7 @@ if (isset($_SESSION['stud_name'])) {
                 </li>
 
                 <li>
-                    <a href="dashboard.php">
+                    <a href="#">
                         <span class="icon">
                             <ion-icon name="home-outline"></ion-icon>
                         </span>
@@ -47,51 +47,14 @@ if (isset($_SESSION['stud_name'])) {
                 </li>
 
                 <li>
-                    <a href="#">
+                    <a href="classlist.php">
                         <span class="icon">
                             <ion-icon name="people-outline"></ion-icon>
                         </span>
-                        <span class="title">Class Schedule</span>
+                        <span class="title">Class List</span>
                     </a>
                 </li>
-
-
-                <li>
-                    <a href="record.php">
-                        <span class="icon">
-                            <ion-icon name="book-outline"></ion-icon>
-                        </span>
-                        <span class="title">Records</span>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="message.php">
-                        <span class="icon">
-                            <ion-icon name="chatbubble-outline"></ion-icon>
-                        </span>
-                        <span class="title">Messages</span>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="data_export.php">
-                        <span class="icon">
-                            <ion-icon name="download-outline"></ion-icon>
-                        </span>
-                        <span class="title">Data Export</span>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="lms.php">
-                        <span class="icon">
-                            <ion-icon name="lock-closed-outline"></ion-icon>
-                        </span>
-                        <span class="title">LMS</span>
-                    </a>
-                </li>
-
+                
                 <li>
                     <a href="index.php">
                         <span class="icon">
@@ -121,19 +84,17 @@ if (isset($_SESSION['stud_name'])) {
                     <img src="css/image/Asnari.jpg" alt="">
                 </div>
             </div>
-
             <!-- INFORMATION -->
 
+
             <div class="information">
-                <div class="id_num">59891</div>
+                <div class="id_num">Instructor</div>
                 <div class="name">
                     <?php echo $stud_name; ?>
                 </div>
-                <div class="semester">First Semester 2023-2024</div>
-                <div class="grade_level">2nd Year Bachelor of Science in Information Technology</div>
+       
             </div>
-
-            <!-- ================ Order Details List ================= -->
+           
             <div class="details">
                 <div class="recentOrders">
                     <div class="cardHeader">
@@ -145,7 +106,7 @@ if (isset($_SESSION['stud_name'])) {
                         <thead>
                             <tr>
                                 <td>Code</td>
-                                <td>Title</td>
+                                <td>Subject</td>
                                 <td>Description</td>
                                 <td>Units</td>
                                 <td>Day</td>
@@ -158,7 +119,7 @@ if (isset($_SESSION['stud_name'])) {
                         </thead>
 
                         <tbody>
-                            <!-- <tr>
+                            <tr>
                                 <td>254</td>
                                 <td>GE 3</td>
                                 <td>THE CONTEMPORARY WORLD</td>
@@ -169,7 +130,7 @@ if (isset($_SESSION['stud_name'])) {
                                 <td>D9</td>
                                 <td>PS</td>
                                 <td><span class="status official">Official</span></td>
-                            </tr> -->
+                            </tr>
 
                             <tr>
                                 <td>576</td>
@@ -184,7 +145,7 @@ if (isset($_SESSION['stud_name'])) {
                                 <td><span class="status official">Official</span></td>
                             </tr>
 
-                            <!-- <tr>
+                            <tr>
                                 <td>578</td>
                                 <td>GE 20</td>
                                 <td>READING VISUAL ARTS</td>
@@ -195,7 +156,7 @@ if (isset($_SESSION['stud_name'])) {
                                 <td>C17</td>
                                 <td>IT</td>
                                 <td><span class="status official">Official</span></td>
-                            </tr> -->
+                            </tr>
 
                             <tr>
                                 <td>579</td>
@@ -210,7 +171,7 @@ if (isset($_SESSION['stud_name'])) {
                                 <td><span class="status official">Official</span></td>
                             </tr>
 
-                            <!--  <tr>
+                             <tr>
                                 <td>498</td>
                                 <td>GPE 3</td>
                                 <td>PHYSICAL-ACTIVITIES TOWARDS HEALTH & FITNESS</td>
@@ -221,7 +182,7 @@ if (isset($_SESSION['stud_name'])) {
                                 <td>GYM</td>
                                 <td>PE</td>
                                 <td><span class="status official">Official</span></td>
-                            </tr> -->
+                            </tr>
 
                             <tr>
                                 <td>580</td>
@@ -265,12 +226,12 @@ if (isset($_SESSION['stud_name'])) {
                     </table>
                 </div>
 
-                <!-- =========== Scripts =========  -->
-                <script src="js/main.js"></script>
+            <!-- =========== Scripts =========  -->
+            <script src="js/main.js"></script>
 
-                <!-- ====== ionicons ======= -->
-                <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-                <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+            <!-- ====== ionicons ======= -->
+            <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+            <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 
 </html>

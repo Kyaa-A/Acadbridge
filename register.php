@@ -6,8 +6,9 @@ if (isset($_POST['register'])) {
     $email = $_POST['email'];
     $username = $_POST['username'];
     $password = $_POST['password'];
+    $user_type = $_POST['user_type'];
 
-    $sql = "INSERT INTO users (stud_name ,email, username, password) VALUES ('$stud_name','$email','$username','$password')";
+    $sql = "INSERT INTO users (stud_name, email, username, password, user_type) VALUES ('$stud_name','$email','$username','$password', $user_type)";
 
     if ($conn->query($sql) === TRUE) {
         /* echo "Registration successful!"; */

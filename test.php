@@ -1,6 +1,3 @@
-<?php
-include('db_config.php');
-
 if (isset($_POST['login'])) {
     $username = $_POST['username'];
     $password = $_POST['password'];
@@ -28,5 +25,3 @@ if (isset($_POST['login'])) {
     }
     $conn->close();
 }
-
-?>
