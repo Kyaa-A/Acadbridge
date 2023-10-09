@@ -1,15 +1,14 @@
 <?php
-// Start the session
 session_start();
 
-// Check if stud_name is set in the session
 if (isset($_SESSION['stud_name'])) {
     $stud_name = $_SESSION['stud_name'];
 } else {
-    // Redirect to the login page if stud_name is not set
     header("Location: index.php");
-    exit(); // Make sure to exit after redirection
+    exit(); 
 }
+
+include('db_config.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -19,8 +18,19 @@ if (isset($_SESSION['stud_name'])) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
+    <?php
+    if (session_status() == PHP_SESSION_NONE) {
+        session_start();
+    }
+
+    if (isset($_SESSION['delete_success']) && $_SESSION['delete_success']) {
+        echo '<script>alert("Record deleted successfully.");</script>';
+        unset($_SESSION['delete_success']);
+    }
+    ?>
+
     <!-- ======= Styles ====== -->
-    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/admin_dashboard.css">
 </head>
 
 <body>
@@ -38,57 +48,13 @@ if (isset($_SESSION['stud_name'])) {
                 </li>
 
                 <li>
-                    <a href="#">
-                        <span class="icon">
-                            <ion-icon name="home-outline"></ion-icon>
-                        </span>
-                        <span class="title">Dashboard</span>
-                    </a>
-                </li>
 
                 <li>
-                    <a href="course.php">
+                    <a href="#">
                         <span class="icon">
                             <ion-icon name="people-outline"></ion-icon>
                         </span>
-                        <span class="title">Class Schedule</span>
-                    </a>
-                </li>
-
-
-                <li>
-                    <a href="record.php">
-                        <span class="icon">
-                            <ion-icon name="book-outline"></ion-icon>
-                        </span>
-                        <span class="title">Records</span>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="message.php">
-                        <span class="icon">
-                            <ion-icon name="chatbubble-outline"></ion-icon>
-                        </span>
-                        <span class="title">Messages</span>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="data_export.php">
-                        <span class="icon">
-                            <ion-icon name="download-outline"></ion-icon>
-                        </span>
-                        <span class="title">Data Export</span>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="lms.php">
-                        <span class="icon">
-                            <ion-icon name="lock-closed-outline"></ion-icon>
-                        </span>
-                        <span class="title">LMS</span>
+                        <span class="title">User List</span>
                     </a>
                 </li>
 
@@ -118,79 +84,90 @@ if (isset($_SESSION['stud_name'])) {
                 </div>
 
                 <div class="user">
-                    <img src="css/image/Asnari.jpg" alt="">
+                    <!--  <img src="css/image/Asnari.jpg" alt=""> -->
                 </div>
             </div>
             <!-- INFORMATION -->
 
 
             <div class="information">
-                <div class="id_num">59891</div>
+                <div class="id_num">System</div>
                 <div class="name">
                     <?php echo $stud_name; ?>
                 </div>
-                <div class="semester">First Semester 2023-2024</div>
-                <div class="grade_level">2nd Year Bachelor of Science in Information Technology</div>
-            </div>
-            <!-- ======================= Cards ================== -->
-            <div class="cardBox">
-                <div class="card">
-                    <div>
-                        <div class="numbers">5.46</div>
-                        <div class="cardName">Exams Paid</div>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div>
-                        <div class="numbers">22,827.00</div>
-                        <div class="cardName">Total Assessment</div>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div>
-                        <div class="numbers">N/A</div>
-                        <div class="cardName">Special Permit</div>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div>
-                        <div class="numbers">15,672.50</div>
-                        <div class="cardName">Total Payment</div>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div>
-                        <div class="numbers">7,154.50</div>
-                        <div class="cardName">Current Balance</div>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div>
-                        <div class="numbers">2,820.00</div>
-                        <div class="cardName">Per Exam</div>
-                    </div>
-                </div>
-
-                <div class="card seven">
-                    <div>
-                        <div class="numbers">450.00</div>
-                        <div class="cardName">Total Previous Balance</div>
-                    </div>
-                </div>
 
             </div>
 
-            <!-- =========== Scripts =========  -->
-            <script src="js/main.js"></script>
 
-            <!-- ====== ionicons ======= -->
-            <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-            <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+            <!--image slider start-->
+            <div class="slider">
+                <div class="slides">
+                    <div class="slide first">
+                        <div class="header">List of User</div>
+                        <div class="container">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Name</th>
+                                        <th>Email</th>
+                                        <th>Edit</th>
+                                        <th>Delete</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    <?php
+
+                                    $sql = "SELECT * FROM users";
+                                    $result = $conn->query($sql);
+
+                                    if ($result->num_rows > 0) {
+                                        while ($row = $result->fetch_assoc()) {
+
+                                            $stud_id = $row['stud_id'];
+                                            ?>
+                                            <tr>
+                                                <td>
+                                                    <?php echo $stud_id; ?>
+                                                </td>
+                                                <td>
+                                                    <?php echo $row['stud_name']; ?>
+                                                </td>
+                                                <td>
+                                                    <?php echo $row['email']; ?>
+                                                </td>
+                                                <td>
+                                                    <a href="edit_page.php?id=<?php echo $stud_id; ?>">
+                                                        <button type="button" class="icon">Edit</button>
+                                                    </a>
+                                                </td>
+                                                <td>
+                                                    <form method="POST" enctype="multipart/form-data"
+                                                        action="delete_function.php?id=<?php echo $stud_id; ?>">
+                                                        <button type="submit" name="delete" class="icon">Delete</button>
+                                                    </form>
+                                                </td>
+                                                <td><span class="status official">Official</span></td>
+                                            </tr>
+                                            <?php
+                                        }
+                                    } else {
+                                        echo "No users found.";
+                                    }
+                                    ?>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- =========== Scripts =========  -->
+                    <script src="js/main.js"></script>
+
+                    <!-- ====== ionicons ======= -->
+                    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+                    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 
 </html>

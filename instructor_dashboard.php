@@ -1,14 +1,14 @@
 <?php
-// Start the session
+
 session_start();
 
-// Check if stud_name is set in the session
+
 if (isset($_SESSION['stud_name'])) {
     $stud_name = $_SESSION['stud_name'];
 } else {
-    // Redirect to the login page if stud_name is not set
+   
     header("Location: index.php");
-    exit(); // Make sure to exit after redirection
+    exit(); 
 }
 ?>
 <!DOCTYPE html>
@@ -19,7 +19,6 @@ if (isset($_SESSION['stud_name'])) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
-    <!-- ======= Styles ====== -->
     <link rel="stylesheet" href="css/instructor_dashboard.css">
 </head>
 
@@ -43,15 +42,6 @@ if (isset($_SESSION['stud_name'])) {
                             <ion-icon name="home-outline"></ion-icon>
                         </span>
                         <span class="title">Dashboard</span>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="classlist.php">
-                        <span class="icon">
-                            <ion-icon name="people-outline"></ion-icon>
-                        </span>
-                        <span class="title">Class List</span>
                     </a>
                 </li>
                 
@@ -81,7 +71,7 @@ if (isset($_SESSION['stud_name'])) {
                 </div>
 
                 <div class="user">
-                    <img src="css/image/Asnari.jpg" alt="">
+             <!--        <img src="css/image/Asnari.jpg" alt=""> -->
                 </div>
             </div>
             <!-- INFORMATION -->

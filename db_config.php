@@ -1,10 +1,9 @@
 <?php
-$servername = "localhost"; // Change this to your MySQL server hostname
-$username = "root"; // Change this to your MySQL username
-$password = ""; // Change this to your MySQL password
-$dbname = "acadbridge"; // Change this to your database name
+$servername = "localhost"; 
+$username = "root";
+$password = ""; 
+$dbname = "acadbridge"; 
 
-// Create a connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 
 // Check connection

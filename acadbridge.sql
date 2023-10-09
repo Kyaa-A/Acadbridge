@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 07, 2023 at 06:00 AM
+-- Generation Time: Oct 09, 2023 at 01:50 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -20,25 +20,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `acadbridge`
 --
-
--- --------------------------------------------------------
-
---
--- Table structure for table `class_schedule`
---
-
-CREATE TABLE `class_schedule` (
-  `code` varchar(200) NOT NULL,
-  `title` varchar(200) NOT NULL,
-  `description` varchar(200) NOT NULL,
-  `units` varchar(200) NOT NULL,
-  `day` varchar(200) NOT NULL,
-  `term` varchar(200) NOT NULL,
-  `time` varchar(200) NOT NULL,
-  `room` varchar(200) NOT NULL,
-  `program` varchar(200) NOT NULL,
-  `status` varchar(200) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -60,14 +41,12 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`stud_id`, `stud_name`, `email`, `username`, `password`, `user_type`) VALUES
-(31, 'Kim Hiresh D. Racho', 'kimhiresh@gmail.com', 'kimmy', '123', 1),
-(33, 'Ace Rivera', 'augusto@gmail.com', 'ace', '123', 1),
-(34, 'Arjay Escabas', 'asda@gmail.com', 'arjay', '123', 1),
-(35, 'Kyaa Mystera', 'kyaamystera@gmail.com', 'kyaa', '123', 1),
-(36, 'Asnari B. Pacalna', 'asnaripacalna@gmail.com', 'asnari', '123', 1),
-(37, 'Jake Marson Nable', 'jake@gmail.com', 'jake', '123', 1),
-(38, 'Edward Pulvera', 'edward@gmail.com', 'edward', '123', 2),
-(39, 'Admin', 'admin@gmail.com', 'admin', '123', 3);
+(42, 'Administrator', 'systemadmin@gmail.com', 'system', '$2y$10$PQ0r0F5IRBLrV6WviZS7SOXLL1jQUT00ihzd9bqZcIn4UXTmNe7Qm', 3),
+(46, 'Edward Pulvera', 'edward@gmail.com', 'edward', '$2y$10$cIxGZFJLt25AOKahDDAz4.9.0hn9ZEWl4AuUsuc8Nfwr4A/wrQWLC', 2),
+(47, 'Asnari B. Pacalna', 'asnaripacalna@gmail.com', 'asnari', '$2y$10$U4HQXjETFU17jL26jqgQxu8qyvbgleXoBNq/ilfBuoLVqrrDIaW66', 1),
+(48, 'Vincent Ace Rivera', 'augusto@gmail.com', 'ace', '$2y$10$HfnciaY1d0C1Z37bSXBtc.wi8fm6RdkBnJ2LhGC5Wh55tgBW1f0lW', 1),
+(49, 'Gene Ryan A. Depalubos', 'ryan@gmail.com', 'ryan', '$2y$10$jtuwbHnnAF7FNOvTMvzpOOx.7quOxWRjC5pBTm9nG41PmLDZ.BTp.', 1),
+(50, 'Arjay Escabas', 'arjay@gmail.com', 'arjay', '$2y$10$uNtMvevTYVS5RbL6RpWcNetFIkHQUH.NiPTW/7bxHW/nH7XgE0RUa', 1);
 
 --
 -- Indexes for dumped tables
@@ -88,7 +67,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `stud_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
+  MODIFY `stud_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=52;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

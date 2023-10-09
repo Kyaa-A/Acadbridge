@@ -8,24 +8,19 @@ if (isset($_POST['register'])) {
     $password = $_POST['password'];
     $user_type = $_POST['user_type'];
 
-    $sql = "INSERT INTO users (stud_name, email, username, password, user_type) VALUES ('$stud_name','$email','$username','$password', $user_type)";
+ 
+    $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+
+    $sql = "INSERT INTO users (stud_name, email, username, password, user_type) VALUES ('$stud_name', '$email', '$username', '$hashed_password', $user_type)";
 
     if ($conn->query($sql) === TRUE) {
-        /* echo "Registration successful!"; */
-        echo
-            "
-            <script>
-            window.alert('Successfully added to Database');
-            </script>
-            ";
-        $tester = true;
+        echo "<script>window.alert('Successfully added to Database');</script>";
+        header("Location: index.php");
+        exit(); 
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
     }
 
-    if ($tester) {
-        header("Location: index.php");
-    }
     $conn->close();
 }
 ?>
